@@ -1,0 +1,9 @@
+{
+  "project_name": "yzland-site",
+  "files": [
+    {
+      "path": "app/tours/page.tsx",
+      "content": "export default function Page() { return <div>Tours Page</div>; }"
+    }
+  ]
+}
