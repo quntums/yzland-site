@@ -1,5 +1,29 @@
 import json
 import re
+import random
+
+# Variation pools
+intro_variants = [
+    "is a key consideration when planning a trip to Morocco. Understanding this will help you make better travel decisions.",
+    "is one of the most common questions travelers ask before visiting the Sahara. Getting it right makes all the difference.",
+    "can significantly impact your comfort and overall experience in the Moroccan desert. Here's what you need to know.",
+    "is often overlooked by first‑time visitors, but it's essential for a smooth and memorable journey.",
+    "deserves careful thought before you embark on a Moroccan adventure. Our guide breaks it down."
+]
+
+tips_variants = [
+    ["Plan ahead during peak seasons", "Choose a trusted local operator", "Prepare for temperature variations"],
+    ["Book accommodations early", "Pack light but smart", "Stay hydrated throughout the day"],
+    ["Confirm your itinerary in advance", "Bring a power bank for your devices", "Learn a few basic Arabic phrases"],
+    ["Check weather forecasts regularly", "Inform your bank about travel plans", "Carry cash for small purchases"],
+    ["Respect local customs and dress codes", "Always have travel insurance", "Keep digital copies of important documents"]
+]
+
+faq_variants = [
+    {"question": "Is this important for first‑time visitors?", "answer": "Yes, understanding this topic helps you avoid common mistakes and enjoy a stress‑free trip."},
+    {"question": "Can I figure this out on arrival?", "answer": "It's possible, but planning ahead saves time and often money."},
+    {"question": "What's the biggest mistake travelers make?", "answer": "Underestimating the importance of preparation in the desert environment."}
+]
 
 # Starter keyword bank (20 topics)
 keywords = [
@@ -35,6 +59,10 @@ for kw in keywords:
     title = kw.title()
     description = f"Guide: {kw} with expert travel tips for Morocco."
 
+    intro = random.choice(intro_variants)
+    tips = random.choice(tips_variants)
+    faq = random.choice(faq_variants)
+
     content = f"""export const metadata = {{
   title: "{title}",
   description: "{description}",
@@ -42,22 +70,32 @@ for kw in keywords:
 
 export default function Page() {{
   return (
-    <main className="px-6 py-12 max-w-3xl mx-auto space-y-6">
+    <main className="px-6 py-12 max-w-3xl mx-auto space-y-8">
       <h1 className="text-4xl font-bold">{title}</h1>
 
       <p className="text-gray-600">
-        {kw.capitalize()} is one of the most common questions travelers ask when planning a Morocco trip.
+        {kw.capitalize()} {intro}
       </p>
 
-      <h2 className="text-2xl font-semibold">Key Insights</h2>
+      <h2 className="text-2xl font-semibold">Why It Matters</h2>
       <p className="text-gray-600">
-        Understanding this topic helps you plan a better Sahara desert experience.
+        Many travelers overlook this aspect, but it directly impacts comfort, safety, and overall experience. Taking time to understand {kw} ensures you're well prepared.
       </p>
 
-      <h2 className="text-2xl font-semibold">Expert Advice</h2>
+      <h2 className="text-2xl font-semibold">Detailed Guide</h2>
       <p className="text-gray-600">
-        Choosing the right tour and preparation ensures a smooth and memorable journey.
+        When planning a Sahara desert trip, consider weather conditions, logistics, and travel duration. Choosing the right itinerary based on {kw} leads to a smoother and more enjoyable adventure.
       </p>
+
+      <h2 className="text-2xl font-semibold">Expert Tips</h2>
+      <ul className="list-disc pl-6 text-gray-600 space-y-1">
+        <li>{tips[0]}</li>
+        <li>{tips[1]}</li>
+        <li>{tips[2]}</li>
+      </ul>
+
+      <h2 className="text-2xl font-semibold">Frequently Asked Questions</h2>
+      <p className="text-gray-600"><strong>{faq['question']}</strong> {faq['answer']}</p>
 
       <a href="/tours/sahara-3-days" className="inline-block mt-6 px-6 py-3 bg-black text-white rounded-xl">
         Explore Sahara Tours
@@ -106,4 +144,4 @@ output = {
 with open("architect_output.json", "w") as f:
     json.dump(output, f, indent=2)
 
-print(f"Generated {len(files)-1} blog posts + updated index.")
+print(f"Generated {len(files)-1} long‑form blog posts + updated index.")
