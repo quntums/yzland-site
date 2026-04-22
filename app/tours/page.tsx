@@ -1,1 +1,1 @@
-export default function Page() { return <div>Tours Page</div>; }
+export default function Page() { return (<div className='p-10'><h1 className='text-3xl font-bold'>Our Tours</h1><p className='mt-4'>Discover curated journeys across Morocco.</p></div>); }

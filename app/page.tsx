@@ -1,8 +1,1 @@
-export default function Home() {
-  return (
-    <main className="p-10">
-      <h1 className="text-3xl font-bold">YZLand MVP</h1>
-      <p className="mt-4 text-gray-600">Baseline is working.</p>
-    </main>
-  );
-}
+export default function Home() { return (<main className='p-10'><h1 className='text-4xl font-bold'>YZLand Tours</h1><p className='mt-4 text-gray-600'>Luxury travel experiences across Morocco.</p></main>); }

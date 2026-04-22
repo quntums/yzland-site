@@ -2,8 +2,24 @@
   "project_name": "yzland-site",
   "files": [
     {
+      "path": "app/page.tsx",
+      "content": "export default function Home() { return (<main className='p-10'><h1 className='text-4xl font-bold'>YZLand Tours</h1><p className='mt-4 text-gray-600'>Luxury travel experiences across Morocco.</p></main>); }"
+    },
+    {
       "path": "app/tours/page.tsx",
-      "content": "export default function Page() { return <div>Tours Page</div>; }"
+      "content": "export default function Page() { return (<div className='p-10'><h1 className='text-3xl font-bold'>Our Tours</h1><p className='mt-4'>Discover curated journeys across Morocco.</p></div>); }"
+    },
+    {
+      "path": "app/sahara/page.tsx",
+      "content": "export default function Page() { return (<div className='p-10'><h1 className='text-3xl font-bold'>Sahara Experience</h1><p className='mt-4'>Ride into the dunes and sleep under the stars.</p></div>); }"
+    },
+    {
+      "path": "app/about/page.tsx",
+      "content": "export default function Page() { return (<div className='p-10'><h1 className='text-3xl font-bold'>About YZLand</h1><p className='mt-4'>We craft premium Moroccan travel experiences.</p></div>); }"
+    },
+    {
+      "path": "app/contact/page.tsx",
+      "content": "export default function Page() { return (<div className='p-10'><h1 className='text-3xl font-bold'>Contact Us</h1><p className='mt-4'>Get in touch to plan your journey.</p></div>); }"
     }
   ]
 }

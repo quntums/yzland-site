@@ -1,0 +1,1 @@
+export default function Page() { return (<div className='p-10'><h1 className='text-3xl font-bold'>Sahara Experience</h1><p className='mt-4'>Ride into the dunes and sleep under the stars.</p></div>); }

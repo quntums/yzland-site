@@ -1,0 +1,1 @@
+export default function Page() { return (<div className='p-10'><h1 className='text-3xl font-bold'>About YZLand</h1><p className='mt-4'>We craft premium Moroccan travel experiences.</p></div>); }
