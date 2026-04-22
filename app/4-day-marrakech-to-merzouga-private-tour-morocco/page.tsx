@@ -7,13 +7,13 @@ export default function Page() {
   return (
     <main className="px-6 py-12 max-w-5xl mx-auto space-y-6">
       <h1 className="text-4xl font-bold">4 Day Marrakech To Merzouga Private Tour Morocco</h1>
-      <p className="text-gray-600">Book a 4 day marrakech to merzouga private tour morocco with camel trekking and desert camp experience.</p>
+      <p className="text-gray-600">Explore the golden dunes of the Sahara with expert local guides.</p>
 
       <h2 className="text-2xl font-semibold">Highlights</h2>
       <ul className="text-gray-600">
         <li>Camel trekking</li>
-        <li>Luxury desert camp</li>
-        <li>Atlas Mountains journey</li>
+        <li>Desert camp stay</li>
+        <li>Atlas Mountains crossing</li>
       </ul>
 
       <p className="text-xl font-bold">From €450 / person</p>
